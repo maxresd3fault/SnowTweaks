@@ -1,0 +1,31 @@
+*
+!.gitignore
+!README.md
+!LICENSE.txt
+
+# Client
+!minecraft/
+!minecraft/src/
+!minecraft/src/net/
+!minecraft/src/net/minecraft/
+!minecraft/src/net/minecraft/src/
+!minecraft/src/net/minecraft/src/mod_SnowTweaks.java
+!minecraft/src/net/minecraft/src/ItemSnowShovel.java
+!minecraft/src/net/minecraft/src/BlockGhostSnow.java
+!minecraft/src/net/minecraft/src/BlockSnow.java
+!minecraft/src/net/minecraft/src/BlockSnowBlock.java
+!minecraft/src/net/minecraft/src/BlockIce.java
+
+# Server
+!minecraft_server/
+!minecraft_server/src/
+!minecraft_server/src/net/
+!minecraft_server/src/net/minecraft/
+!minecraft_server/src/net/minecraft/src/
+!minecraft_server/src/net/minecraft/src/mod_SnowTweaks.java
+!minecraft_server/src/net/minecraft/src/ItemSnowShovel.java
+!minecraft_server/src/net/minecraft/src/BlockGhostSnow.java
+!minecraft_server/src/net/minecraft/src/BlockSnow.java
+!minecraft_server/src/net/minecraft/src/BlockSnowBlock.java
+!minecraft_server/src/net/minecraft/src/BlockIce.java
+
