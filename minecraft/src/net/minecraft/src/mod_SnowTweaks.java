@@ -13,13 +13,14 @@ public class mod_SnowTweaks extends BaseModMp {
 	public static Item goldSnowShovel;
 	public static Item diamondSnowShovel;
 	public static Item bronzeSnowShovel;
-	private Configuration config;
+	
 	public static boolean doesSnowMelt = false;
 	public static boolean doesIceMelt = false;
 	public static boolean maxresBaseFound = false;
 	public static boolean icFound = false;
 	public static World lastWorld = null;
 	
+	private Configuration config;
 	private static Property bronzeSnowShovelID;
 
 	public String Name() {
@@ -103,7 +104,7 @@ public class mod_SnowTweaks extends BaseModMp {
             Class.forName("mod_IndustrialCraft");
             icFound = true;
         	log("IndustrialCraft found! The bronze snow shovel will be available.", 0);
-        	bronzeSnowShovel = (new ItemSnowShovel(Integer.parseInt(bronzeSnowShovelID.value) - 256, EnumToolMaterial.IRON)).setIconIndex(ModLoader.addOverride("/gui/items.png", "/maxres/SnowTweaks/bronzeSnowShovel.png")).setMaxDamage(350).setItemName("bronzeSnowShovelID");
+        	bronzeSnowShovel = (new ItemSnowShovel(Integer.parseInt(bronzeSnowShovelID.value) - 256, EnumToolMaterial.IRON)).setIconIndex(ModLoader.addOverride("/gui/items.png", "/maxres/SnowTweaks/bronzeSnowShovel.png")).setMaxDamage(350).setItemName("bronzeSnowShovel");
 			ModLoader.AddName(bronzeSnowShovel, "Bronze Snow Shovel");
 			ModLoader.AddRecipe(new ItemStack(bronzeSnowShovel, 1), new Object[] {"0B0", "BSB", "0S0", Character.valueOf('B'), mod_IndustrialCraft.ingotBronze, Character.valueOf('S'), Item.stick});
         } catch (Exception e) {

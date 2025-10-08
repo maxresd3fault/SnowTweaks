@@ -5,7 +5,7 @@ import java.util.Random;
 public class BlockSnow extends Block {
 	protected BlockSnow(int var1, int var2) {
 		super(var1, var2, mod_SnowTweaks.materialSwitch(var1));
-		this.setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 2.0F / 16.0F, 1.0F);
+		this.setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 0.125F, 1.0F);
 		this.setTickOnLoad(true);
 	}
 

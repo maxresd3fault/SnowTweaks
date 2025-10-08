@@ -26,7 +26,7 @@ public class ItemSnowShovel extends ItemTool {
 			int y = mop.blockY;
 			int z = mop.blockZ;
 			Block block = Block.blocksList[world.getBlockId(x, y, z)];
-			if (block.blockID == Block.snow.blockID) {
+			if (block != null && block.blockID == Block.snow.blockID) {
 				player.swingItem();
 				itemStack.damageItem(1, player);
 				world.setBlockWithNotify(x, y, z, mod_SnowTweaks.blockGhostSnow.blockID);
