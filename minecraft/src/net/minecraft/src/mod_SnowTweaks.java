@@ -1,6 +1,8 @@
 package net.minecraft.src;
 
 import java.io.File;
+import java.util.logging.Level;
+
 import forge.Configuration;
 import forge.Property;
 import net.minecraft.client.Minecraft;
@@ -19,6 +21,9 @@ public class mod_SnowTweaks extends BaseModMp {
 	public static boolean maxresBaseFound = false;
 	public static boolean icFound = false;
 	public static World lastWorld = null;
+	protected static boolean BlockIceClassInstalled = false;
+	protected static boolean BlockSnowClassInstalled = false;
+	protected static boolean BlockSnowBlockClassInstalled = false;
 	
 	private Configuration config;
 	private static Property bronzeSnowShovelID;
@@ -40,6 +45,11 @@ public class mod_SnowTweaks extends BaseModMp {
 	}
 	
 	public mod_SnowTweaks() {
+		if (!BlockIceClassInstalled || !BlockSnowClassInstalled || !BlockSnowBlockClassInstalled) {
+			log("One or more of the base classes has not been injected, please install this mod as a jarmod.", Level.SEVERE);
+			return;
+		}
+		
 		File configDir = new File(Minecraft.getMinecraftDir(), "/config/");
 		config = new Configuration(new File(configDir, "SnowTweaks.cfg"));
 		
@@ -94,19 +104,22 @@ public class mod_SnowTweaks extends BaseModMp {
 
     @Override
     public void ModsLoaded() {
+    	if (!BlockIceClassInstalled || !BlockSnowClassInstalled || !BlockSnowBlockClassInstalled) return;
         try {
             Class.forName("mod_MaxresBase");
             maxresBaseFound = true;
         } catch (Exception e) {
-        	log("MaxresBase not installed! This mod will not function.", 2);
+        	log("MaxresBase not installed! This mod will not function.", Level.SEVERE);
         }
         try {
             Class.forName("mod_IndustrialCraft");
             icFound = true;
-        	log("IndustrialCraft found! The bronze snow shovel will be available.", 0);
+        	
         	bronzeSnowShovel = (new ItemSnowShovel(Integer.parseInt(bronzeSnowShovelID.value) - 256, EnumToolMaterial.IRON)).setIconIndex(ModLoader.addOverride("/gui/items.png", "/maxres/SnowTweaks/bronzeSnowShovel.png")).setMaxDamage(350).setItemName("bronzeSnowShovel");
 			ModLoader.AddName(bronzeSnowShovel, "Bronze Snow Shovel");
 			ModLoader.AddRecipe(new ItemStack(bronzeSnowShovel, 1), new Object[] {"0B0", "BSB", "0S0", Character.valueOf('B'), mod_IndustrialCraft.ingotBronze, Character.valueOf('S'), Item.stick});
+			
+			log("IndustrialCraft found! The bronze snow shovel will be available.", Level.INFO);
         } catch (Exception e) {
         }
     }
@@ -128,13 +141,7 @@ public class mod_SnowTweaks extends BaseModMp {
 		}
 	}
 	
-	public static void log(String str, int messageCase) {
-		if (messageCase == 0) {
-			System.out.println("[SnowTweaks]: " + str);
-		} else if (messageCase == 1) {
-			System.out.println("[SnowTweaks][WARN]: " + str);
-		} else if (messageCase == 2) {
-			System.out.println("[SnowTweaks][FATAL ERROR]: " + str);
-		}
+	public static void log(String str, Level level) {
+		ModLoader.getLogger().log(level, "[SnowTweaks]: " + str);
 	}
 }

@@ -6,6 +6,7 @@ public class BlockSnowBlock extends Block {
 	protected BlockSnowBlock(int var1, int var2) {
 		super(var1, var2, Material.builtSnow);
 		this.setTickOnLoad(true);
+		mod_SnowTweaks.BlockSnowBlockClassInstalled = true;
 	}
 	
 	public void harvestBlock(World world, EntityPlayer player, int x, int y, int z, int meta) {

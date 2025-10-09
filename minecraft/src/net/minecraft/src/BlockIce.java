@@ -7,6 +7,7 @@ public class BlockIce extends BlockBreakable {
 		super(var1, var2, Material.ice, false);
 		this.slipperiness = 0.98F;
 		this.setTickOnLoad(true);
+		mod_SnowTweaks.BlockIceClassInstalled = true;
 	}
 
 	public int getRenderBlockPass() {

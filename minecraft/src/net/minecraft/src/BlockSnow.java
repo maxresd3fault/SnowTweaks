@@ -7,6 +7,7 @@ public class BlockSnow extends Block {
 		super(var1, var2, mod_SnowTweaks.materialSwitch(var1));
 		this.setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 0.125F, 1.0F);
 		this.setTickOnLoad(true);
+		mod_SnowTweaks.BlockSnowClassInstalled = true;
 	}
 
 	public AxisAlignedBB getCollisionBoundingBoxFromPool(World var1, int var2, int var3, int var4) {
