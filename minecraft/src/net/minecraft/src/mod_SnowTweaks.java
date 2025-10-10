@@ -33,7 +33,7 @@ public class mod_SnowTweaks extends BaseModMp {
 	}
 	
 	public String Version() {
-		return "R10625";
+		return "R101025";
 	}
 	
 	public String Description() {
