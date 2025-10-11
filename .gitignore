@@ -1,0 +1,19 @@
+*
+!.gitignore
+!README.md
+!LICENSE.txt
+
+# Server
+!minecraft_server/
+!minecraft_server/src/
+!minecraft_server/src/net/
+!minecraft_server/src/net/minecraft/
+!minecraft_server/src/net/minecraft/server/
+!minecraft_server/src/net/minecraft/server/mod_SnowTweaks.java
+!minecraft_server/src/net/minecraft/server/SnowTweaksOverrides.java
+!minecraft_server/src/net/minecraft/server/ItemSnowShovel.java
+!minecraft_server/src/net/minecraft/server/BlockGhostSnow.java
+!minecraft_server/src/net/minecraft/server/BlockSnow.java
+!minecraft_server/src/net/minecraft/server/BlockSnowBlock.java
+!minecraft_server/src/net/minecraft/server/BlockIce.java
+
