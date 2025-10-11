@@ -21,10 +21,10 @@ SnowTweaks is a Minecraft mod for 'golden age' versions that changes how snow wo
 
 **Installation**:
 
-The mod can either be installed as a standalone mod or as a jar mod. It also requires my helper mod, MaxresBase, which provides important overrides via reflector allow this mod to function. You must install the following base classes:
+This mod needs to be installed as a jarmod as it modifies 3 base classes. It also requires my helper mod, MaxresBase, which provides important overrides via reflector allow this mod to function. The following classes are edited:
 
-| Client     | Server     |
-|------------|------------|
-| `ac.class` | `gj.class` |
-| `jr.class` | `ik.class` |
-| `nk.class` | `p.class`  |
+| Unobfuscated Name      | Client     | Server     |
+|------------------------|------------|------------|
+| `BlockIce.class`       | `nk.class` | `ik.class` |
+| `BlockSnow.class`      | `jr.class` | `gj.class` |
+| `BlockSnowBlock.class` | `ac.class` | `p.class`  |
