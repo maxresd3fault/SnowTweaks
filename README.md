@@ -2,7 +2,7 @@
 
 **Overview**:
 
-SnowTweaks is a Minecraft mod for 'golden age' versions that changes how snow works and reacts. By default snow and ice no longer melt (configurable). To prevent snowfall in an area you right click snow with any of the new 'Snow Shovel' tools. This will spawn a 'ghost snow' block which is invisible and acts as if nothing is there, but will stop new snow from falling. Left clicking with the snow shovel harvests snow off the ground, a previously unobtainable block. Snow shovels also can harvest snow blocks, and the diamond one can even harvest ice.
+SnowTweaks is a Minecraft mod for 'golden age' versions that changes how snow works and reacts. By default snow and ice no longer melt (configurable). To prevent snowfall in an area you right click snow with any of the new 'Snow Shovel' tools. This will spawn a 'ghost snow' block which is invisible and acts as if nothing is there, but will stop new snow from falling. Left clicking with the snow shovel harvests snow off the ground, a previously unobtainable block. Snow shovels also can harvest snow blocks, iron and above can even harvest ice.
 
 **Features**:
 
