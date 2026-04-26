@@ -42,7 +42,7 @@ public class mod_SnowTweaks extends NetworkMod {
 	private static Property sapphireSnowShovelID;
 	
 	public String getVersion() {
-		return "R101125";
+		return "R042626";
 	}
 	
 	public void load() {
