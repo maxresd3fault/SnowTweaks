@@ -28,7 +28,7 @@ public class mod_SnowTweaks extends BaseModMp {
 	private static Property bronzeSnowShovelID;
 	
 	public String Version() {
-		return "R101025";
+		return "R042626";
 	}
 	
 	public mod_SnowTweaks() {

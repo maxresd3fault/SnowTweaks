@@ -14,9 +14,11 @@ public class BlockIce extends BlockBreakable {
 		ItemStack heldItem = player.getCurrentEquippedItem();
 		
 		if (heldItem != null && 
-		(heldItem.itemID == mod_SnowTweaks.diamondSnowShovel.shiftedIndex ||
-		(mod_SnowTweaks.icFound && heldItem.itemID == mod_SnowTweaks.bronzeSnowShovel.shiftedIndex))) {
-	    	heldItem.damageItem(15, player);
+		(heldItem.itemID == mod_SnowTweaks.ironSnowShovel.shiftedIndex ||
+			heldItem.itemID == mod_SnowTweaks.goldSnowShovel.shiftedIndex ||
+			heldItem.itemID == mod_SnowTweaks.diamondSnowShovel.shiftedIndex ||
+			(mod_SnowTweaks.icFound && heldItem.itemID == mod_SnowTweaks.bronzeSnowShovel.shiftedIndex)))
+		{
 	    	dropBlockAsItem_do(world, x, y, z, new ItemStack(this, 1));
 	    	world.setBlockWithNotify(x, y, z, 0);
 		} else {
