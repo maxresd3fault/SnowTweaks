@@ -15,9 +15,14 @@ public class BlockIce extends BlockHalfTransparant {
 		ItemStack heldItem = player.U();
 	    
 		if (heldItem != null && 
-		(heldItem.id == mod_SnowTweaks.diamondSnowShovel.id ||
-		(mod_SnowTweaks.ic2Found && heldItem.id == mod_SnowTweaks.bronzeSnowShovel.id))) {
-	    	heldItem.damage(15, player);
+		(heldItem.id == mod_SnowTweaks.ironSnowShovel.id ||
+			heldItem.id == mod_SnowTweaks.goldSnowShovel.id ||
+			heldItem.id == mod_SnowTweaks.diamondSnowShovel.id ||
+			(mod_SnowTweaks.ic2Found && heldItem.id == mod_SnowTweaks.bronzeSnowShovel.id) ||
+			(mod_SnowTweaks.redPowerFound && heldItem.id == mod_SnowTweaks.rubySnowShovel.id) ||
+			(mod_SnowTweaks.redPowerFound && heldItem.id == mod_SnowTweaks.emeraldSnowShovel.id) ||
+			(mod_SnowTweaks.redPowerFound && heldItem.id == mod_SnowTweaks.sapphireSnowShovel.id)))
+		{
 	    	a(world, x, y, z, new ItemStack(this, 1));
 	    	world.setTypeId(x, y, z, 0);
 		} else {
